@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Market Heatmap</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><path fill=%22%2374c0fc%22 d=%22M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-41.9 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 41.9-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm241.4 0h116.7c-29.9 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.2-151.6z%22/></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top UTC Time Bar (Marquee) -->
+    <div id="top-time-bar">
+        <div class="marquee-content" id="time-marquee"></div>
+    </div>
+
+    <!-- Title (Top Left) -->
+    <div class="main-title">
+        <h1><i class="fa-solid fa-globe fa-lg" style="color: rgb(116, 192, 252);"></i> Global Market Heatmap</h1>
+    </div>
+    
+    <!-- Speed Control (Bottom Center) -->
+    <div id="bottom-speed-control">
+        <label for="speed-slider">SPEED: <span id="speed-value">1x</span></label>
+        <input type="range" id="speed-slider" min="0" max="100" value="0">
+    </div>
+    
+    <!-- TradingView Heatmap Overlay -->
+    <div id="heatmap-overlay" class="hidden">
+        <div class="heatmap-header">
+            <h2 id="heatmap-title">Market</h2>
+            <button id="close-heatmap">&times;</button>
+        </div>
+        <div id="tradingview-container"></div>
+    </div>
+
+    <!-- Hover Tooltip -->
+    <div id="market-tooltip" class="hidden">Market Name</div>
+
+    <div id="canvas-container"></div>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/lines/LineSegmentsGeometry.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/lines/LineGeometry.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/lines/LineMaterial.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/lines/LineSegments2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.140.0/examples/js/lines/Line2.js"></script>
+    
+    <!-- D3 Geo Dependencies for Canvas borders -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

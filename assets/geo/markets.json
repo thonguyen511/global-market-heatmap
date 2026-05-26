@@ -1,0 +1,326 @@
+[
+  {
+    "name": "Argentina",
+    "iso": "AR",
+    "code": "AllAR",
+    "lat": -33.501159,
+    "lon": -64.173331,
+    "openUTC": 14,
+    "closeUTC": 20
+  },
+  {
+    "name": "Australia",
+    "iso": "AU",
+    "code": "AllAU",
+    "lat": -24.129522,
+    "lon": 134.04972,
+    "openUTC": 0,
+    "closeUTC": 6
+  },
+  {
+    "name": "Brazil",
+    "iso": "BR",
+    "code": "AllBR",
+    "lat": -12.098687,
+    "lon": -49.55945,
+    "openUTC": 13,
+    "closeUTC": 20
+  },
+  {
+    "name": "Canada",
+    "iso": "CA",
+    "code": "AllCA",
+    "lat": 60.324287,
+    "lon": -101.9107,
+    "openUTC": 13.5,
+    "closeUTC": 20
+  },
+  {
+    "name": "Chile",
+    "iso": "CL",
+    "code": "AllCL",
+    "lat": -38.151771,
+    "lon": -72.318871,
+    "openUTC": 13.5,
+    "closeUTC": 20
+  },
+  {
+    "name": "Colombia",
+    "iso": "CO",
+    "code": "AllCO",
+    "lat": 3.373111,
+    "lon": -73.174347,
+    "openUTC": 14.5,
+    "closeUTC": 21
+  },
+  {
+    "name": "Cyprus",
+    "iso": "CY",
+    "code": "AllCY",
+    "lat": 34.913329,
+    "lon": 33.084182,
+    "openUTC": 7,
+    "closeUTC": 14
+  },
+  {
+    "name": "Denmark",
+    "iso": "DK",
+    "code": "AllDK",
+    "lat": 55.966965,
+    "lon": 9.018163,
+    "openUTC": 7,
+    "closeUTC": 15
+  },
+  {
+    "name": "Egypt",
+    "iso": "EG",
+    "code": "AllEG",
+    "lat": 26.186173,
+    "lon": 29.445837,
+    "openUTC": 7,
+    "closeUTC": 11.5
+  },
+  {
+    "name": "Estonia",
+    "iso": "EE",
+    "code": "AllEE",
+    "lat": 58.724865,
+    "lon": 25.867126,
+    "openUTC": 7,
+    "closeUTC": 13
+  },
+  {
+    "name": "Finland",
+    "iso": "FI",
+    "code": "AllFI",
+    "lat": 63.252361,
+    "lon": 27.276449,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "Germany",
+    "iso": "DE",
+    "code": "AllDE",
+    "lat": 50.961733,
+    "lon": 9.678348,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "Greece",
+    "iso": "GR",
+    "code": "AllGRC",
+    "lat": 39.492763,
+    "lon": 21.72568,
+    "openUTC": 7,
+    "closeUTC": 14.329999999999998
+  },
+  {
+    "name": "Hong Kong",
+    "iso": "HK",
+    "code": "HSTECH",
+    "lat": 22.448829,
+    "lon": 114.097769,
+    "openUTC": 1.5,
+    "closeUTC": 8
+  },
+  {
+    "name": "Hungary",
+    "iso": "HU",
+    "code": "AllHU",
+    "lat": 47.086841,
+    "lon": 19.447867,
+    "openUTC": 7,
+    "closeUTC": 15
+  },
+  {
+    "name": "Iceland",
+    "iso": "IS",
+    "code": "AllIS",
+    "lat": 64.779286,
+    "lon": -18.673711,
+    "openUTC": 9.5,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "India",
+    "iso": "IN",
+    "code": "SENSEX",
+    "lat": 22.686852,
+    "lon": 79.358105,
+    "openUTC": 3.75,
+    "closeUTC": 10
+  },
+  {
+    "name": "Indonesia",
+    "iso": "ID",
+    "code": "AllID",
+    "lat": -0.954404,
+    "lon": 101.892949,
+    "openUTC": 2,
+    "closeUTC": 8
+  },
+  {
+    "name": "Israel",
+    "iso": "IL",
+    "code": "AllIL",
+    "lat": 30.911148,
+    "lon": 34.847915,
+    "openUTC": 7,
+    "closeUTC": 14.399999999999999
+  },
+  {
+    "name": "Italy",
+    "iso": "IT",
+    "code": "AllIT",
+    "lat": 44.732482,
+    "lon": 11.076907,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "Kuwait",
+    "iso": "KW",
+    "code": "AllKW",
+    "lat": 29.413628,
+    "lon": 47.313999,
+    "openUTC": 6,
+    "closeUTC": 9.75
+  },
+  {
+    "name": "Latvia",
+    "iso": "LV",
+    "code": "AllLV",
+    "lat": 57.066872,
+    "lon": 25.458723,
+    "openUTC": 7,
+    "closeUTC": 13
+  },
+  {
+    "name": "Lithuania",
+    "iso": "LT",
+    "code": "AllLT",
+    "lat": 55.103703,
+    "lon": 24.089932,
+    "openUTC": 7,
+    "closeUTC": 13
+  },
+  {
+    "name": "Nigeria",
+    "iso": "NG",
+    "code": "AllNGA",
+    "lat": 9.439799,
+    "lon": 7.50322,
+    "openUTC": 9,
+    "closeUTC": 13.5
+  },
+  {
+    "name": "Mexico",
+    "iso": "MX",
+    "code": "FTBIVA",
+    "lat": 23.919988,
+    "lon": -102.289448,
+    "openUTC": 14.5,
+    "closeUTC": 21
+  },
+  {
+    "name": "Morocco",
+    "iso": "MA",
+    "code": "AllMA",
+    "lat": 31.650723,
+    "lon": -7.187296,
+    "openUTC": 8.5,
+    "closeUTC": 14.5
+  },
+  {
+    "name": "Pakistan",
+    "iso": "PK",
+    "code": "AllPK",
+    "lat": 29.328389,
+    "lon": 68.545632,
+    "openUTC": 4.25,
+    "closeUTC": 10.5
+  },
+  {
+    "name": "Poland",
+    "iso": "PL",
+    "code": "AllPO",
+    "lat": 51.990316,
+    "lon": 19.490468,
+    "openUTC": 7,
+    "closeUTC": 15
+  },
+  {
+    "name": "Romania",
+    "iso": "RO",
+    "code": "AllRO",
+    "lat": 45.733237,
+    "lon": 24.972624,
+    "openUTC": 7,
+    "closeUTC": 15.25
+  },
+  {
+    "name": "South Korea",
+    "iso": "KR",
+    "code": "AllKR",
+    "lat": 36.384924,
+    "lon": 128.129504,
+    "openUTC": 0,
+    "closeUTC": 6.5
+  },
+  {
+    "name": "Spain",
+    "iso": "ES",
+    "code": "AllES",
+    "lat": 40.090953,
+    "lon": -3.464718,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "Sweden",
+    "iso": "SE",
+    "code": "AllSWE",
+    "lat": 65.85918,
+    "lon": 19.01705,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "Switzerland",
+    "iso": "CH",
+    "code": "AllCHE",
+    "lat": 46.719114,
+    "lon": 7.463965,
+    "openUTC": 7,
+    "closeUTC": 15.5
+  },
+  {
+    "name": "UAE",
+    "iso": "AE",
+    "code": "ADXFADX15",
+    "lat": 23.466285,
+    "lon": 54.547256,
+    "openUTC": 6,
+    "closeUTC": 11
+  },
+  {
+    "name": "USA",
+    "iso": "US",
+    "code": "AllUSA",
+    "lat": 39.538479,
+    "lon": -97.482602,
+    "openUTC": 13.5,
+    "closeUTC": 20
+  },
+  {
+    "name": "Venezuela",
+    "iso": "VE",
+    "code": "AllVE",
+    "lat": 7.182476,
+    "lon": -64.599381,
+    "openUTC": 13,
+    "closeUTC": 17
+  }
+]

@@ -8,8 +8,6 @@ and exporting the high-resolution PNG image to assets/cache_png/crypto.png.
 import time
 import os
 from playwright.sync_api import sync_playwright
-import cloudinary
-import cloudinary.uploader
 
 def run():
     print("Starting Playwright for Crypto Heatmap...")
@@ -56,15 +54,6 @@ def run():
             out_path = "assets/cache_png/crypto.png"
             download.save_as(out_path)
             print(f"Successfully saved to {out_path}!")
-
-            if os.environ.get('CLOUDINARY_URL'):
-                print("Uploading to Cloudinary...")
-                cloudinary.uploader.upload(
-                    out_path, 
-                    public_id="cache_png/crypto",
-                    overwrite=True
-                )
-                print("Successfully uploaded to Cloudinary!")
 
         except Exception as e:
             print("Failed to process Crypto Heatmap:", e)

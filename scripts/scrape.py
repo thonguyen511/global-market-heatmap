@@ -13,8 +13,6 @@ import urllib.parse
 from playwright.async_api import async_playwright
 from datetime import datetime
 import zoneinfo
-import cloudinary
-import cloudinary.uploader
 
 def is_market_open(iso, trading_hours, holidays):
     tz_name = trading_hours.get('timezone')
@@ -109,18 +107,6 @@ async def process_market(market, browser, market_details, holidays, semaphore):
             out_path = f"assets/cache_png/{iso}.png"
             await download.save_as(out_path)
             print(f"[{iso}] Successfully saved to {out_path}!")
-
-            # Upload to Cloudinary if CLOUDINARY_URL is configured
-            if os.environ.get('CLOUDINARY_URL'):
-                print(f"[{iso}] Uploading to Cloudinary...")
-                # Run the synchronous Cloudinary upload in a background thread to avoid blocking the async event loop
-                await asyncio.to_thread(
-                    cloudinary.uploader.upload, 
-                    out_path, 
-                    public_id=f"cache_png/{iso}",
-                    overwrite=True
-                )
-                print(f"[{iso}] Successfully uploaded to Cloudinary!")
 
         except Exception as e:
             print(f"[{iso}] Failed to process {iso}:", e)

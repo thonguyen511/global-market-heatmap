@@ -2,7 +2,7 @@ name: Scrape Markets to Cloudinary
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Runs every 10 minutes
+    - cron: '*/10 * * * *' # Scheduled to run every 10 minutes
   workflow_dispatch: # Allows you to trigger it manually
 
 jobs:

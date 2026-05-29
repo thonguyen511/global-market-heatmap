@@ -9,6 +9,9 @@ import { marketDots } from '../objects/Markets.js';
 import { earthGroup } from '../objects/Earth.js';
 import { moonGroup } from '../objects/Moon.js';
 
+// IMPORTANT: Replace this with your actual Cloudinary Cloud Name
+const CLOUDINARY_CLOUD_NAME = "dco4ojkit"; 
+
 // Setup Raycaster for converting 2D screen mouse coordinates into 3D space intersections
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -54,7 +57,16 @@ function showHeatmap(market) {
         widgetWrapper.style.height = '100%';
         
         const img = document.createElement('img');
-        img.src = `assets/cache_png/${market.iso}.png`;
+        const timestamp = new Date().getTime();
+        
+        // Use Cloudinary for the images. The timestamp prevents the browser from caching the old image.
+        if (CLOUDINARY_CLOUD_NAME !== "YOUR_CLOUD_NAME") {
+            img.src = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/upload/v1/cache_png/${market.iso}.png?t=${timestamp}`;
+        } else {
+            // Fallback for local testing before configuring Cloudinary
+            img.src = `assets/cache_png/${market.iso}.png?t=${timestamp}`;
+        }
+        
         img.style.width = '100%';
         img.style.height = '100%';
         img.style.objectFit = 'contain'; // This ensures the image scales perfectly inside the container

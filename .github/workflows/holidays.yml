@@ -1,0 +1,32 @@
+name: Generate Annual Holidays
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # Runs exactly at midnight on January 1st every year
+  workflow_dispatch: # Allows you to trigger it manually
+
+jobs:
+  generate-holidays:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install NPM Packages
+        run: npm install
+          
+      - name: Generate Holidays JSON
+        run: node scripts/generate_holidays.js
+        
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/geo/holidays.json
+          git commit -m "chore: Update annual holidays for $(date +'%Y')" || echo "No changes to commit"
+          git push

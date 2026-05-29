@@ -1,3 +1,4 @@
 .gemini
 .antigravitycli
 node_modules
+assets/cache_png/*

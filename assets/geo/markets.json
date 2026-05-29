@@ -1,326 +1,1864 @@
 [
   {
+    "name": "USA",
+    "iso": "USA",
+    "lat": 39.538479,
+    "lon": -97.482602,
+    "codes": [
+      "NASDAQ100",
+      "NASDAQCOMPOSITE",
+      "DJCA",
+      "DJDJI",
+      "DJDJT",
+      "DJDJU",
+      "NASDAQBKX",
+      "TVCRUI",
+      "TVCRUT",
+      "TVCRUA",
+      "SPX500",
+      "AllUSA"
+    ],
+    "code_name": [
+      "Nasdaq 100 Index",
+      "Nasdaq Composite Index",
+      "Dow Jones Composite Average Index",
+      "Dow Jones Industrial Average Index",
+      "Dow Jones Transportation Average Index",
+      "Dow Jones Utility Average Index",
+      "KBW NASDAQ Bank Index",
+      "Russell 1000 Index",
+      "Russell 2000 Index",
+      "Russell 3000 Index",
+      "S&P 500 Index",
+      "All US companies"
+    ],
+    "trading_hours": {
+      "exchange": "NYSE / NASDAQ",
+      "timezone": "America/New_York",
+      "open": "09:30",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC-5",
+      "summer_offset": "UTC-4",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "US"
+  },
+  {
     "name": "Argentina",
-    "iso": "AR",
-    "code": "AllAR",
+    "iso": "ARG",
     "lat": -33.501159,
     "lon": -64.173331,
-    "openUTC": 14,
-    "closeUTC": 20
+    "codes": [
+      "BCBAIMV",
+      "AllAR"
+    ],
+    "code_name": [
+      "S&P MERVAL Index",
+      "All Argentinean companies"
+    ],
+    "trading_hours": {
+      "exchange": "BYMA (Bolsas y Mercados Argentinos)",
+      "timezone": "America/Argentina/Buenos_Aires",
+      "open": "11:00",
+      "close": "17:00",
+      "dst_observed": false,
+      "winter_offset": "UTC-3",
+      "summer_offset": "UTC-3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "AR"
   },
   {
     "name": "Australia",
-    "iso": "AU",
-    "code": "AllAU",
+    "iso": "AUS",
     "lat": -24.129522,
     "lon": 134.04972,
-    "openUTC": 0,
-    "closeUTC": 6
+    "codes": [
+      "ASX200",
+      "AllAU"
+    ],
+    "code_name": [
+      "S&P/ASX 200 Index",
+      "All Australian companies"
+    ],
+    "trading_hours": {
+      "exchange": "ASX (Australian Securities Exchange)",
+      "timezone": "Australia/Sydney",
+      "open": "10:00",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+10",
+      "summer_offset": "UTC+11",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "AU"
+  },
+  {
+    "name": "Belgium",
+    "iso": "BEL",
+    "lat": 50.785392,
+    "lon": 4.800448,
+    "codes": [
+      "BEL20",
+      "AllBE"
+    ],
+    "code_name": [
+      "BEL 20 Index",
+      "All Belgian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext Brussels",
+      "timezone": "Europe/Brussels",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "BE"
   },
   {
     "name": "Brazil",
-    "iso": "BR",
-    "code": "AllBR",
+    "iso": "BRA",
     "lat": -12.098687,
     "lon": -49.55945,
-    "openUTC": 13,
-    "closeUTC": 20
+    "codes": [
+      "IBOV",
+      "IBXL",
+      "AllBR"
+    ],
+    "code_name": [
+      "Bovespa Index",
+      "Brazil 50 Index",
+      "All Brazilian companies"
+    ],
+    "trading_hours": {
+      "exchange": "B3 (Brasil, Bolsa, Balcão)",
+      "timezone": "America/Sao_Paulo",
+      "open": "10:00",
+      "close": "17:55",
+      "dst_observed": false,
+      "winter_offset": "UTC-3",
+      "summer_offset": "UTC-3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "BR"
   },
   {
     "name": "Canada",
-    "iso": "CA",
-    "code": "AllCA",
+    "iso": "CAN",
     "lat": 60.324287,
     "lon": -101.9107,
-    "openUTC": 13.5,
-    "closeUTC": 20
+    "codes": [
+      "TSX",
+      "AllCA"
+    ],
+    "code_name": [
+      "S&P/TSX Composite Index",
+      "All Canadian companies"
+    ],
+    "trading_hours": {
+      "exchange": "TSX (Toronto Stock Exchange)",
+      "timezone": "America/Toronto",
+      "open": "09:30",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC-5",
+      "summer_offset": "UTC-4",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CA"
   },
   {
     "name": "Chile",
-    "iso": "CL",
-    "code": "AllCL",
+    "iso": "CHL",
     "lat": -38.151771,
     "lon": -72.318871,
-    "openUTC": 13.5,
-    "closeUTC": 20
+    "codes": [
+      "BCSSPIPSA",
+      "AllCL"
+    ],
+    "code_name": [
+      "S&P IPSA Index",
+      "All Chilean companies"
+    ],
+    "trading_hours": {
+      "exchange": "Santiago Stock Exchange",
+      "timezone": "America/Santiago",
+      "open": "09:30",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC-4",
+      "summer_offset": "UTC-3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CL"
+  },
+  {
+    "name": "Mainland China",
+    "iso": "CHN",
+    "lat": 32.498178,
+    "lon": 106.337289,
+    "codes": [
+      "SZSE399001",
+      "AllCN"
+    ],
+    "code_name": [
+      "Shenzhen Component Index",
+      "All Chinese companies"
+    ],
+    "trading_hours": {
+      "exchange": "Shanghai / Shenzhen Stock Exchange",
+      "timezone": "Asia/Shanghai",
+      "open": "09:30",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CN"
   },
   {
     "name": "Colombia",
-    "iso": "CO",
-    "code": "AllCO",
+    "iso": "COL",
     "lat": 3.373111,
     "lon": -73.174347,
-    "openUTC": 14.5,
-    "closeUTC": 21
+    "codes": [
+      "BVCICAP",
+      "AllCO"
+    ],
+    "code_name": [
+      "MSCI COLCAP Index",
+      "All Colombian companies"
+    ],
+    "trading_hours": {
+      "exchange": "BVC (Bolsa de Valores de Colombia)",
+      "timezone": "America/Bogota",
+      "open": "09:30",
+      "close": "16:00",
+      "dst_observed": false,
+      "winter_offset": "UTC-5",
+      "summer_offset": "UTC-5",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CO"
   },
   {
     "name": "Cyprus",
-    "iso": "CY",
-    "code": "AllCY",
+    "iso": "CYP",
     "lat": 34.913329,
     "lon": 33.084182,
-    "openUTC": 7,
-    "closeUTC": 14
+    "codes": [
+      "CSECYALTE",
+      "CSECYMAIN",
+      "CSECYGEN",
+      "CSECYINVE",
+      "CSECYHOTEL",
+      "CSECYFTSE20",
+      "AllCY"
+    ],
+    "code_name": [
+      "CSE Alternative Market Index",
+      "CSE Main Market Index",
+      "CSE General Index",
+      "CSE Investment Market Index",
+      "CSE Hotels Index",
+      "FTSE/CySE 20 Index",
+      "All Cyprus companies"
+    ],
+    "trading_hours": {
+      "exchange": "Cyprus Stock Exchange",
+      "timezone": "Asia/Nicosia",
+      "open": "10:15",
+      "close": "17:20",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CY"
   },
   {
     "name": "Denmark",
-    "iso": "DK",
-    "code": "AllDK",
+    "iso": "DNK",
     "lat": 55.966965,
     "lon": 9.018163,
-    "openUTC": 7,
-    "closeUTC": 15
+    "codes": [
+      "OMXCOPOMXC25",
+      "AllDK"
+    ],
+    "code_name": [
+      "OMX Copenhagen 25 Index",
+      "All Danish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Copenhagen",
+      "timezone": "Europe/Copenhagen",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "DK"
   },
   {
     "name": "Egypt",
-    "iso": "EG",
-    "code": "AllEG",
+    "iso": "EGY",
     "lat": 26.186173,
     "lon": 29.445837,
-    "openUTC": 7,
-    "closeUTC": 11.5
+    "codes": [
+      "EGXEGX30",
+      "AllEG"
+    ],
+    "code_name": [
+      "EGX 30 Index",
+      "All Egyptian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Egyptian Exchange (EGX)",
+      "timezone": "Africa/Cairo",
+      "open": "10:00",
+      "close": "14:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Friday",
+        "Saturday"
+      ]
+    },
+    "iso2": "EG"
   },
   {
     "name": "Estonia",
-    "iso": "EE",
-    "code": "AllEE",
+    "iso": "EST",
     "lat": 58.724865,
     "lon": 25.867126,
-    "openUTC": 7,
-    "closeUTC": 13
+    "codes": [
+      "OMXTSEOMXTGI",
+      "AllEE"
+    ],
+    "code_name": [
+      "OMX Tallinn Gross Index",
+      "All Estonian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Tallinn",
+      "timezone": "Europe/Tallinn",
+      "open": "10:00",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "EE"
+  },
+  {
+    "name": "Europe",
+    "iso": "EUR",
+    "lat": 54.526,
+    "lon": 15.2551,
+    "codes": [
+      "SX5E",
+      "SXXP",
+      "AllEUN",
+      "AllEU"
+    ],
+    "code_name": [
+      "Euro Stoxx 50 Index",
+      "STOXX 600",
+      "All European Union companies",
+      "All European companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext / STOXX",
+      "timezone": "Europe/Brussels",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "EU"
   },
   {
     "name": "Finland",
-    "iso": "FI",
-    "code": "AllFI",
+    "iso": "FIN",
     "lat": 63.252361,
     "lon": 27.276449,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "HELSINKI25",
+      "AllFI"
+    ],
+    "code_name": [
+      "OMX Helsinki 25 Index",
+      "All Finnish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Helsinki",
+      "timezone": "Europe/Helsinki",
+      "open": "10:00",
+      "close": "18:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "FI"
+  },
+  {
+    "name": "France",
+    "iso": "FRA",
+    "lat": 46.696113,
+    "lon": 2.552275,
+    "codes": [
+      "CAC40",
+      "SBF120",
+      "AllFR"
+    ],
+    "code_name": [
+      "CAC 40 Index",
+      "SBF 120 Index",
+      "All French companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext Paris",
+      "timezone": "Europe/Paris",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "FR"
   },
   {
     "name": "Germany",
-    "iso": "DE",
-    "code": "AllDE",
+    "iso": "DEU",
     "lat": 50.961733,
     "lon": 9.678348,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "DAX",
+      "MDAX",
+      "SDAX",
+      "TECDAX",
+      "AllDE"
+    ],
+    "code_name": [
+      "DAX Index",
+      "MDAX Index",
+      "SDAX Index",
+      "TecDAX Index",
+      "All German companies"
+    ],
+    "trading_hours": {
+      "exchange": "Frankfurt Stock Exchange (Xetra)",
+      "timezone": "Europe/Berlin",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "DE"
   },
   {
     "name": "Greece",
-    "iso": "GR",
-    "code": "AllGRC",
+    "iso": "GRC",
     "lat": 39.492763,
     "lon": 21.72568,
-    "openUTC": 7,
-    "closeUTC": 14.329999999999998
+    "codes": [
+      "ATHEXGD",
+      "ATHEXFTSEA",
+      "ATHEXFTSEM",
+      "ATHEXFTSE",
+      "AllGRC"
+    ],
+    "code_name": [
+      "ATHEX Composite Index",
+      "FTSE/ATHEX Market Index",
+      "FTSE/ATHEX Mid Cap Index",
+      "FTSE/ATHEX Large Cap Index",
+      "All Greek companies"
+    ],
+    "trading_hours": {
+      "exchange": "Athens Exchange (ATHEX)",
+      "timezone": "Europe/Athens",
+      "open": "10:00",
+      "close": "17:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "GR"
   },
   {
-    "name": "Hong Kong",
-    "iso": "HK",
-    "code": "HSTECH",
+    "name": "Hong Kong, China",
+    "iso": "HKG",
     "lat": 22.448829,
     "lon": 114.097769,
-    "openUTC": 1.5,
-    "closeUTC": 8
+    "codes": [
+      "HSI",
+      "HSTECH",
+      "HSCEI",
+      "AllHK"
+    ],
+    "code_name": [
+      "Hang Seng Index",
+      "Hang Seng Tech Index",
+      "Hang Seng China Enterprises Index",
+      "All Hong Kong companies"
+    ],
+    "trading_hours": {
+      "exchange": "Hong Kong Stock Exchange (HKEX)",
+      "timezone": "Asia/Hong_Kong",
+      "open": "09:30",
+      "close": "16:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "HK"
   },
   {
     "name": "Hungary",
-    "iso": "HU",
-    "code": "AllHU",
+    "iso": "HUN",
     "lat": 47.086841,
     "lon": 19.447867,
-    "openUTC": 7,
-    "closeUTC": 15
+    "codes": [
+      "BETBUX",
+      "AllHU"
+    ],
+    "code_name": [
+      "Budapest Stock Exchange Index",
+      "All Hungarian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Budapest Stock Exchange (BSE)",
+      "timezone": "Europe/Budapest",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "HU"
   },
   {
     "name": "Iceland",
-    "iso": "IS",
-    "code": "AllIS",
+    "iso": "ISL",
     "lat": 64.779286,
     "lon": -18.673711,
-    "openUTC": 9.5,
-    "closeUTC": 15.5
+    "codes": [
+      "OMXICEOMXI15",
+      "AllIS"
+    ],
+    "code_name": [
+      "OMX Iceland 15 Index",
+      "All Icelandic companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Iceland",
+      "timezone": "Atlantic/Reykjavik",
+      "open": "09:30",
+      "close": "15:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+0",
+      "summer_offset": "UTC+0",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "IS"
   },
   {
     "name": "India",
-    "iso": "IN",
-    "code": "SENSEX",
+    "iso": "IND",
     "lat": 22.686852,
     "lon": 79.358105,
-    "openUTC": 3.75,
-    "closeUTC": 10
+    "codes": [
+      "NIFTY50",
+      "SENSEX",
+      "CNX500",
+      "NIFTYJR",
+      "AllIN"
+    ],
+    "code_name": [
+      "Nifty 50 Index",
+      "S&P BSE Sensex Index",
+      "Nifty 500 Index",
+      "Nifty Next 50 Index",
+      "All Indian companies"
+    ],
+    "trading_hours": {
+      "exchange": "NSE / BSE",
+      "timezone": "Asia/Kolkata",
+      "open": "09:15",
+      "close": "15:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+5:30",
+      "summer_offset": "UTC+5:30",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "IN"
   },
   {
     "name": "Indonesia",
-    "iso": "ID",
-    "code": "AllID",
+    "iso": "IDN",
     "lat": -0.954404,
     "lon": 101.892949,
-    "openUTC": 2,
-    "closeUTC": 8
+    "codes": [
+      "IDX30",
+      "AllID"
+    ],
+    "code_name": [
+      "IDX 30 Index",
+      "All Indonesian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Indonesia Stock Exchange (IDX)",
+      "timezone": "Asia/Jakarta",
+      "open": "09:00",
+      "close": "16:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+7",
+      "summer_offset": "UTC+7",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "ID"
+  },
+  {
+    "name": "Ireland",
+    "iso": "IRL",
+    "lat": 53.078726,
+    "lon": -7.798588,
+    "codes": [
+      "ISEQ",
+      "ISE20",
+      "AllIE"
+    ],
+    "code_name": [
+      "ISEQ All Share Index",
+      "ISEQ 20 Index",
+      "All Irish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext Dublin",
+      "timezone": "Europe/Dublin",
+      "open": "08:00",
+      "close": "16:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+0",
+      "summer_offset": "UTC+1",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "IE"
   },
   {
     "name": "Israel",
-    "iso": "IL",
-    "code": "AllIL",
+    "iso": "ISR",
     "lat": 30.911148,
     "lon": 34.847915,
-    "openUTC": 7,
-    "closeUTC": 14.399999999999999
+    "codes": [
+      "TA35",
+      "TA125",
+      "AllIL"
+    ],
+    "code_name": [
+      "TA-35 Index",
+      "TA-125 Index",
+      "All Israeli companies"
+    ],
+    "trading_hours": {
+      "exchange": "Tel Aviv Stock Exchange (TASE)",
+      "timezone": "Asia/Jerusalem",
+      "open": "10:00",
+      "close": "17:35",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "IL"
   },
   {
     "name": "Italy",
-    "iso": "IT",
-    "code": "AllIT",
+    "iso": "ITA",
     "lat": 44.732482,
     "lon": 11.076907,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "FTSEMIB",
+      "AllIT"
+    ],
+    "code_name": [
+      "FTSE MIB Index",
+      "All Italian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Borsa Italiana",
+      "timezone": "Europe/Rome",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "IT"
+  },
+  {
+    "name": "Japan",
+    "iso": "JPN",
+    "lat": 36.142538,
+    "lon": 138.44217,
+    "codes": [
+      "NI225",
+      "AllJP"
+    ],
+    "code_name": [
+      "Japan 225 Index",
+      "All Japanese companies"
+    ],
+    "trading_hours": {
+      "exchange": "Tokyo Stock Exchange",
+      "timezone": "Asia/Tokyo",
+      "open": "09:00",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+9",
+      "summer_offset": "UTC+9",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "JP"
   },
   {
     "name": "Kuwait",
-    "iso": "KW",
-    "code": "AllKW",
+    "iso": "KWT",
     "lat": 29.413628,
     "lon": 47.313999,
-    "openUTC": 6,
-    "closeUTC": 9.75
+    "codes": [
+      "KSEBKA",
+      "KSEBKM50",
+      "KSEBKM",
+      "KSEBKP",
+      "AllKW"
+    ],
+    "code_name": [
+      "Boursa Kuwait All Share Index",
+      "Boursa Kuwait Main Market 50 Index",
+      "Boursa Kuwait Main Market Index",
+      "Boursa Kuwait Premier Market Index",
+      "All Kuwaiti companies"
+    ],
+    "trading_hours": {
+      "exchange": "Boursa Kuwait",
+      "timezone": "Asia/Kuwait",
+      "open": "09:00",
+      "close": "12:45",
+      "dst_observed": false,
+      "winter_offset": "UTC+3",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Friday",
+        "Saturday"
+      ]
+    },
+    "iso2": "KW"
   },
   {
     "name": "Latvia",
-    "iso": "LV",
-    "code": "AllLV",
+    "iso": "LVA",
     "lat": 57.066872,
     "lon": 25.458723,
-    "openUTC": 7,
-    "closeUTC": 13
+    "codes": [
+      "OMXRSEOMXRGI",
+      "AllLV"
+    ],
+    "code_name": [
+      "OMX Riga Gross Index",
+      "All Latvian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Riga",
+      "timezone": "Europe/Riga",
+      "open": "10:00",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "LV"
   },
   {
     "name": "Lithuania",
-    "iso": "LT",
-    "code": "AllLT",
+    "iso": "LTU",
     "lat": 55.103703,
     "lon": 24.089932,
-    "openUTC": 7,
-    "closeUTC": 13
+    "codes": [
+      "OMXVSEOMXVGI",
+      "AllLT"
+    ],
+    "code_name": [
+      "OMX Vilnius Gross Index",
+      "All Lithuanian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Vilnius",
+      "timezone": "Europe/Vilnius",
+      "open": "10:00",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "LT"
   },
   {
-    "name": "Nigeria",
-    "iso": "NG",
-    "code": "AllNGA",
-    "lat": 9.439799,
-    "lon": 7.50322,
-    "openUTC": 9,
-    "closeUTC": 13.5
+    "name": "Luxembourg",
+    "iso": "LUX",
+    "lat": 49.733732,
+    "lon": 6.07762,
+    "codes": [
+      "LUXG",
+      "LUXX",
+      "AllLU"
+    ],
+    "code_name": [
+      "Lux General Index",
+      "LuxX Price Index",
+      "All Luxembourg companies"
+    ],
+    "trading_hours": {
+      "exchange": "Luxembourg Stock Exchange (LuxSE)",
+      "timezone": "Europe/Luxembourg",
+      "open": "09:00",
+      "close": "17:35",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "LU"
+  },
+  {
+    "name": "Malaysia",
+    "iso": "MYS",
+    "lat": 2.528667,
+    "lon": 113.83708,
+    "codes": [
+      "AllMY"
+    ],
+    "code_name": [
+      "All Malaysian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Bursa Malaysia",
+      "timezone": "Asia/Kuala_Lumpur",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "MY"
   },
   {
     "name": "Mexico",
-    "iso": "MX",
-    "code": "FTBIVA",
+    "iso": "MEX",
     "lat": 23.919988,
     "lon": -102.289448,
-    "openUTC": 14.5,
-    "closeUTC": 21
+    "codes": [
+      "BMVME",
+      "F4GBIVA",
+      "FTBIVA",
+      "AllMX"
+    ],
+    "code_name": [
+      "S&P/BMV IPC Index",
+      "FTSE4Good BIVA Index",
+      "FTSE BIVA Index",
+      "All Mexican companies"
+    ],
+    "trading_hours": {
+      "exchange": "Bolsa Mexicana de Valores (BMV)",
+      "timezone": "America/Mexico_City",
+      "open": "08:30",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC-6",
+      "summer_offset": "UTC-6",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "MX"
   },
   {
     "name": "Morocco",
-    "iso": "MA",
-    "code": "AllMA",
+    "iso": "MAR",
     "lat": 31.650723,
     "lon": -7.187296,
-    "openUTC": 8.5,
-    "closeUTC": 14.5
+    "codes": [
+      "CSEMAMASI",
+      "AllMA"
+    ],
+    "code_name": [
+      "MASI Index",
+      "All Moroccan companies"
+    ],
+    "trading_hours": {
+      "exchange": "Casablanca Stock Exchange",
+      "timezone": "Africa/Casablanca",
+      "open": "09:00",
+      "close": "15:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+0",
+      "summer_offset": "UTC+1",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "MA"
+  },
+  {
+    "name": "Netherlands",
+    "iso": "NLD",
+    "lat": 52.422211,
+    "lon": 5.61144,
+    "codes": [
+      "AEX",
+      "AllNL"
+    ],
+    "code_name": [
+      "AEX Index",
+      "All Dutch companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext Amsterdam",
+      "timezone": "Europe/Amsterdam",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "NL"
+  },
+  {
+    "name": "New Zealand",
+    "iso": "NZL",
+    "lat": -39.759,
+    "lon": 172.787,
+    "codes": [
+      "NZXNZ50G",
+      "AllNZ"
+    ],
+    "code_name": [
+      "S&P / NZX 50 Index Gross",
+      "All New Zealand companies"
+    ],
+    "trading_hours": {
+      "exchange": "NZX (New Zealand Exchange)",
+      "timezone": "Pacific/Auckland",
+      "open": "10:00",
+      "close": "16:45",
+      "dst_observed": true,
+      "winter_offset": "UTC+12",
+      "summer_offset": "UTC+13",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "NZ"
+  },
+  {
+    "name": "Nigeria",
+    "iso": "NGA",
+    "lat": 9.439799,
+    "lon": 7.50322,
+    "codes": [
+      "NSENGNGX30",
+      "AllNGA"
+    ],
+    "code_name": [
+      "NGX 30 Index",
+      "All Nigerian companies"
+    ],
+    "trading_hours": {
+      "exchange": "NGX (Nigerian Exchange)",
+      "timezone": "Africa/Lagos",
+      "open": "09:30",
+      "close": "14:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+1",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "NG"
+  },
+  {
+    "name": "Norway",
+    "iso": "NOR",
+    "lat": 61.357092,
+    "lon": 9.679975,
+    "codes": [
+      "AllNO"
+    ],
+    "code_name": [
+      "All Norwegian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Oslo Børs",
+      "timezone": "Europe/Oslo",
+      "open": "09:00",
+      "close": "16:20",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "NO"
   },
   {
     "name": "Pakistan",
-    "iso": "PK",
-    "code": "AllPK",
+    "iso": "PAK",
     "lat": 29.328389,
     "lon": 68.545632,
-    "openUTC": 4.25,
-    "closeUTC": 10.5
+    "codes": [
+      "PSXBKTI",
+      "PSXJSMFI",
+      "PSXKMI30",
+      "PSXKMIALLSHR",
+      "PSXKSE30",
+      "PSXKSE100",
+      "PSXALLSHR",
+      "PSXMZNPI",
+      "PSXNBPPGI",
+      "PSXNITPGI",
+      "PSXOGTI",
+      "PSXUPP9",
+      "AllPK"
+    ],
+    "code_name": [
+      "PSX Banking Sector Tradable Index",
+      "JS Momentum Factor Index",
+      "KMI 30 Index",
+      "PSX-KMI All Share Index",
+      "KSE 30 Index",
+      "KSE 100 Index",
+      "KSE All Share Index",
+      "Meezan Pakistan Index",
+      "NBP Pakistan Growth Index",
+      "NIT Pakistan Gateway Index",
+      "PSX Oil & Gas Tradable Sector Index",
+      "UBL Pakistan Enterprise Index",
+      "All Pakistani companies"
+    ],
+    "trading_hours": {
+      "exchange": "PSX (Pakistan Stock Exchange)",
+      "timezone": "Asia/Karachi",
+      "open": "09:30",
+      "close": "15:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+5",
+      "summer_offset": "UTC+5",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "PK"
+  },
+  {
+    "name": "Peru",
+    "iso": "PER",
+    "lat": -12.976679,
+    "lon": -72.90016,
+    "codes": [
+      "BVLSPBLPGPT",
+      "AllPE"
+    ],
+    "code_name": [
+      "S&P / BVL Peru General Index (PEN)",
+      "All Peruvian companies"
+    ],
+    "trading_hours": {
+      "exchange": "BVL (Bolsa de Valores de Lima)",
+      "timezone": "America/Lima",
+      "open": "08:20",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC-5",
+      "summer_offset": "UTC-5",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "PE"
+  },
+  {
+    "name": "Philippines",
+    "iso": "PHL",
+    "lat": 11.198,
+    "lon": 122.465,
+    "codes": [
+      "AllPH"
+    ],
+    "code_name": [
+      "All Philippine companies"
+    ],
+    "trading_hours": {
+      "exchange": "PSE (Philippine Stock Exchange)",
+      "timezone": "Asia/Manila",
+      "open": "09:00",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "PH"
   },
   {
     "name": "Poland",
-    "iso": "PL",
-    "code": "AllPO",
+    "iso": "POL",
     "lat": 51.990316,
     "lon": 19.490468,
-    "openUTC": 7,
-    "closeUTC": 15
+    "codes": [
+      "GPWWIG20",
+      "AllPO"
+    ],
+    "code_name": [
+      "WIG20 Index",
+      "All Polish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Warsaw Stock Exchange (GPW)",
+      "timezone": "Europe/Warsaw",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "PL"
+  },
+  {
+    "name": "Portugal",
+    "iso": "PRT",
+    "lat": 39.606675,
+    "lon": -8.271754,
+    "codes": [
+      "EURONEXTPSI20",
+      "AllPRT"
+    ],
+    "code_name": [
+      "PSI Index",
+      "All Portuguese companies"
+    ],
+    "trading_hours": {
+      "exchange": "Euronext Lisbon",
+      "timezone": "Europe/Lisbon",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+0",
+      "summer_offset": "UTC+1",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "PT"
+  },
+  {
+    "name": "Qatar",
+    "iso": "QAT",
+    "lat": 25.237383,
+    "lon": 51.143509,
+    "codes": [
+      "QSEGNRI",
+      "AllQA"
+    ],
+    "code_name": [
+      "QE Index",
+      "All Qatar companies"
+    ],
+    "trading_hours": {
+      "exchange": "Qatar Stock Exchange",
+      "timezone": "Asia/Qatar",
+      "open": "09:30",
+      "close": "13:15",
+      "dst_observed": false,
+      "winter_offset": "UTC+3",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Friday",
+        "Saturday"
+      ]
+    },
+    "iso2": "QA"
   },
   {
     "name": "Romania",
-    "iso": "RO",
-    "code": "AllRO",
+    "iso": "ROU",
     "lat": 45.733237,
     "lon": 24.972624,
-    "openUTC": 7,
-    "closeUTC": 15.25
+    "codes": [
+      "BVBBET",
+      "AllRO"
+    ],
+    "code_name": [
+      "Bucharest Exchange Trading Index",
+      "All Romanian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Bucharest Stock Exchange (BVB)",
+      "timezone": "Europe/Bucharest",
+      "open": "09:45",
+      "close": "18:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "RO"
+  },
+  {
+    "name": "Russia",
+    "iso": "RUS",
+    "lat": 58.249357,
+    "lon": 44.686469,
+    "codes": [
+      "MOEXRUSSIA",
+      "MOEXBROAD",
+      "MOEXSMID",
+      "RTS",
+      "RTSBROAD",
+      "AllRU"
+    ],
+    "code_name": [
+      "Russia Index",
+      "Broad Market Index",
+      "SMID Index",
+      "RTS Index",
+      "RTS Broad Market Index",
+      "All Russian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Moscow Exchange (MOEX)",
+      "timezone": "Europe/Moscow",
+      "open": "09:50",
+      "close": "18:50",
+      "dst_observed": false,
+      "winter_offset": "UTC+3",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "RU"
+  },
+  {
+    "name": "Saudi Arabia",
+    "iso": "SAU",
+    "lat": 23.806908,
+    "lon": 44.6996,
+    "codes": [
+      "TADAWULTBNI",
+      "TADAWULTCGI",
+      "TADAWULTDAI",
+      "TADAWULTENI",
+      "TADAWULTFBI",
+      "TADAWULTHEI",
+      "TADAWULTISI",
+      "TADAWULTMTI",
+      "TADAWULTRMI",
+      "TADAWULTRLI",
+      "TADAWULTASI",
+      "TADAWULTTSI",
+      "AllSA"
+    ],
+    "code_name": [
+      "Tadawul Banks Index",
+      "Tadawul Capital Goods Index",
+      "Tadawul Consumer Durables & Apparel Index",
+      "Tadawul Energy Index",
+      "Tadawul Food & Beverages Index",
+      "Tadawul Health Care Equipment & Service Index",
+      "Tadawul Insurance Index",
+      "Tadawul Materials Index",
+      "Tadawul Real Estate Management & Development Index",
+      "Tadawul Consumer Discretionary Distribution & Retail Index",
+      "Tadawul All Shares Index",
+      "Tadawul Telecommunication Services Index",
+      "All Saudi Arabian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Tadawul",
+      "timezone": "Asia/Riyadh",
+      "open": "10:00",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+3",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Friday",
+        "Saturday"
+      ]
+    },
+    "iso2": "SA"
+  },
+  {
+    "name": "Serbia",
+    "iso": "SRB",
+    "lat": 44.189919,
+    "lon": 20.787989,
+    "codes": [
+      "BELEX15",
+      "BELEXLINE",
+      "AllRS"
+    ],
+    "code_name": [
+      "BELEX 15 Index",
+      "BELEXline",
+      "All Serbian companies"
+    ],
+    "trading_hours": {
+      "exchange": "Belgrade Stock Exchange (BELEX)",
+      "timezone": "Europe/Belgrade",
+      "open": "09:00",
+      "close": "14:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "RS"
+  },
+  {
+    "name": "Singapore",
+    "iso": "SGP",
+    "lat": 1.366587,
+    "lon": 103.816925,
+    "codes": [
+      "TVCSTI",
+      "AllSGP"
+    ],
+    "code_name": [
+      "Straits Times Index",
+      "All Singapore companies"
+    ],
+    "trading_hours": {
+      "exchange": "Singapore Exchange (SGX)",
+      "timezone": "Asia/Singapore",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "SG"
+  },
+  {
+    "name": "Slovakia",
+    "iso": "SVK",
+    "lat": 48.734044,
+    "lon": 19.049868,
+    "codes": [
+      "SAX",
+      "AllSK"
+    ],
+    "code_name": [
+      "Slovak Share Index",
+      "All Slovak companies"
+    ],
+    "trading_hours": {
+      "exchange": "Bratislava Stock Exchange (BSSE)",
+      "timezone": "Europe/Bratislava",
+      "open": "09:00",
+      "close": "16:00",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "SK"
+  },
+  {
+    "name": "South Africa",
+    "iso": "ZAF",
+    "lat": -29.708776,
+    "lon": 23.665734,
+    "codes": [
+      "SA40",
+      "AllZA"
+    ],
+    "code_name": [
+      "South Africa Top 40 Index",
+      "All South African companies"
+    ],
+    "trading_hours": {
+      "exchange": "JSE (Johannesburg Stock Exchange)",
+      "timezone": "Africa/Johannesburg",
+      "open": "09:00",
+      "close": "17:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+2",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "ZA"
   },
   {
     "name": "South Korea",
-    "iso": "KR",
-    "code": "AllKR",
+    "iso": "KOR",
     "lat": 36.384924,
     "lon": 128.129504,
-    "openUTC": 0,
-    "closeUTC": 6.5
+    "codes": [
+      "KOSPI",
+      "KOSPI200",
+      "KOSDAQ",
+      "KOSDAQ150",
+      "AllKR"
+    ],
+    "code_name": [
+      "KOSPI Composite Index",
+      "KOSPI 200 Index",
+      "KOSDAQ Composite Index",
+      "KOSDAQ 150 Index",
+      "All South Korean companies"
+    ],
+    "trading_hours": {
+      "exchange": "Korea Exchange (KRX)",
+      "timezone": "Asia/Seoul",
+      "open": "09:00",
+      "close": "15:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+9",
+      "summer_offset": "UTC+9",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "KR"
   },
   {
     "name": "Spain",
-    "iso": "ES",
-    "code": "AllES",
+    "iso": "ESP",
     "lat": 40.090953,
     "lon": -3.464718,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "IBEX35",
+      "BMEIS",
+      "BMEICC",
+      "BMEINDGRO15",
+      "BMEINDGROAS",
+      "AllES"
+    ],
+    "code_name": [
+      "IBEX 35 Index",
+      "IBEX Small Cap Index",
+      "IBEX Medium Cap Index",
+      "IBEX Growth Market 15 Index",
+      "IBEX Growth Market All Share Index",
+      "All Spanish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Bolsas y Mercados Españoles (BME)",
+      "timezone": "Europe/Madrid",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "ES"
   },
   {
     "name": "Sweden",
-    "iso": "SE",
-    "code": "AllSWE",
+    "iso": "SWE",
     "lat": 65.85918,
     "lon": 19.01705,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "OMXS30",
+      "AllSWE"
+    ],
+    "code_name": [
+      "OMX Stockholm 30 Index",
+      "All Swedish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Nasdaq Stockholm",
+      "timezone": "Europe/Stockholm",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "SE"
   },
   {
     "name": "Switzerland",
-    "iso": "CH",
-    "code": "AllCHE",
+    "iso": "CHE",
     "lat": 46.719114,
     "lon": 7.463965,
-    "openUTC": 7,
-    "closeUTC": 15.5
+    "codes": [
+      "SIXSMI",
+      "AllCHE"
+    ],
+    "code_name": [
+      "Swiss Market Index",
+      "All Swiss companies"
+    ],
+    "trading_hours": {
+      "exchange": "SIX Swiss Exchange",
+      "timezone": "Europe/Zurich",
+      "open": "09:00",
+      "close": "17:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+1",
+      "summer_offset": "UTC+2",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CH"
+  },
+  {
+    "name": "Taiwan, China",
+    "iso": "TWN",
+    "lat": 23.652408,
+    "lon": 120.868204,
+    "codes": [
+      "GTSM50",
+      "TW50",
+      "AllTW"
+    ],
+    "code_name": [
+      "GreTai 50 Index",
+      "FTSE TWSE Taiwan 50 Index",
+      "All Taiwan companies"
+    ],
+    "trading_hours": {
+      "exchange": "TWSE (Taiwan Stock Exchange)",
+      "timezone": "Asia/Taipei",
+      "open": "09:00",
+      "close": "13:30",
+      "dst_observed": false,
+      "winter_offset": "UTC+8",
+      "summer_offset": "UTC+8",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "CN-TW"
+  },
+  {
+    "name": "Thailand",
+    "iso": "THA",
+    "lat": 15.45974,
+    "lon": 101.073198,
+    "codes": [
+      "SET50",
+      "SET100",
+      "AllTH"
+    ],
+    "code_name": [
+      "SET 50 Index",
+      "SET 100 Index",
+      "All Thai companies"
+    ],
+    "trading_hours": {
+      "exchange": "Stock Exchange of Thailand (SET)",
+      "timezone": "Asia/Bangkok",
+      "open": "10:00",
+      "close": "17:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+7",
+      "summer_offset": "UTC+7",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "TH"
+  },
+  {
+    "name": "Turkey",
+    "iso": "TUR",
+    "lat": 39.345388,
+    "lon": 34.508268,
+    "codes": [
+      "BIST30",
+      "BIST100",
+      "BISTBANK",
+      "BISTELKT",
+      "BISTGIDA",
+      "BISTTEK",
+      "BISTTUM",
+      "ALLTR"
+    ],
+    "code_name": [
+      "BIST 30 Index",
+      "BIST 100 Index",
+      "BIST Banks Index",
+      "BIST Electricity Index",
+      "BIST Food Beverage Index",
+      "BIST Technology Index",
+      "BIST All Shares Index",
+      "All Turkish companies"
+    ],
+    "trading_hours": {
+      "exchange": "Borsa Istanbul (BIST)",
+      "timezone": "Europe/Istanbul",
+      "open": "10:00",
+      "close": "18:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+3",
+      "summer_offset": "UTC+3",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "TR"
   },
   {
     "name": "UAE",
-    "iso": "AE",
-    "code": "ADXFADX15",
+    "iso": "ARE",
     "lat": 23.466285,
     "lon": 54.547256,
-    "openUTC": 6,
-    "closeUTC": 11
+    "codes": [
+      "ADXFADX15",
+      "DFMDFMGI",
+      "AllARE"
+    ],
+    "code_name": [
+      "FTSE ADX 15 Index",
+      "DFM Index",
+      "All UAE companies"
+    ],
+    "trading_hours": {
+      "exchange": "DFM / ADX",
+      "timezone": "Asia/Dubai",
+      "open": "10:00",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+4",
+      "summer_offset": "UTC+4",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "AE"
   },
   {
-    "name": "USA",
-    "iso": "US",
-    "code": "AllUSA",
-    "lat": 39.538479,
-    "lon": -97.482602,
-    "openUTC": 13.5,
-    "closeUTC": 20
+    "name": "UK",
+    "iso": "GBR",
+    "lat": 54.402739,
+    "lon": -2.116346,
+    "codes": [
+      "UK100",
+      "AllUK"
+    ],
+    "code_name": [
+      "UK 100 Index",
+      "All UK companies"
+    ],
+    "trading_hours": {
+      "exchange": "London Stock Exchange (LSE)",
+      "timezone": "Europe/London",
+      "open": "08:00",
+      "close": "16:30",
+      "dst_observed": true,
+      "winter_offset": "UTC+0",
+      "summer_offset": "UTC+1",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "GB"
   },
   {
-    "name": "Venezuela",
-    "iso": "VE",
-    "code": "AllVE",
-    "lat": 7.182476,
-    "lon": -64.599381,
-    "openUTC": 13,
-    "closeUTC": 17
+    "name": "Vietnam",
+    "iso": "VNM",
+    "lat": 21.715416,
+    "lon": 105.387292,
+    "codes": [
+      "AllVN"
+    ],
+    "code_name": [
+      "All Vietnamese companies"
+    ],
+    "trading_hours": {
+      "exchange": "HOSE / HNX",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "open": "09:00",
+      "close": "15:00",
+      "dst_observed": false,
+      "winter_offset": "UTC+7",
+      "summer_offset": "UTC+7",
+      "weekend_days": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "iso2": "VN"
   }
 ]

@@ -1,17 +1,29 @@
+/**
+ * @file TimeManager.js
+ * @description Manages the application's internal clock and time-scaling features.
+ * This includes logic for the time slider (allowing users to speed up the day/night cycle),
+ * and updating the UI marquee that displays market hours.
+ */
+
 export let timeMultiplier = 1;
 export const simulatedTimeMs = Date.now();
 
+// UI Elements
 const marqueeDisplay = document.getElementById('time-marquee');
 const speedSlider = document.getElementById('speed-slider');
 const speedValueLabel = document.getElementById('speed-value');
+
+// ==========================================
+// 1. Time Scaling & Slider Interaction
+// ==========================================
 
 if (speedSlider && speedValueLabel) {
     speedSlider.addEventListener('input', (e) => {
         const val = parseInt(e.target.value);
         if (val === 0) {
-            timeMultiplier = 1;
+            timeMultiplier = 1; // Real-time
         } else {
-            timeMultiplier = Math.pow(10, val / 20); // Exponential speed scale
+            timeMultiplier = Math.pow(10, val / 20); // Exponential speed scale for drastic fast-forwarding
         }
         
         if (timeMultiplier >= 1000) {
@@ -24,41 +36,52 @@ if (speedSlider && speedValueLabel) {
     });
 }
 
-const timezones = [
-    { label: "Honolulu (UTC-10)", offset: -10 },
-    { label: "Los Angeles (UTC-7)", offset: -7 },
-    { label: "Chicago (UTC-5)", offset: -5 },
-    { label: "New York (UTC-4)", offset: -4 },
-    { label: "Sao Paulo (UTC-3)", offset: -3 },
-    { label: "GLOBAL UTC", offset: 0 },
-    { label: "London (UTC+1)", offset: 1 },
-    { label: "Paris (UTC+2)", offset: 2 },
-    { label: "Moscow (UTC+3)", offset: 3 },
-    { label: "Dubai (UTC+4)", offset: 4 },
-    { label: "Mumbai (UTC+5.5)", offset: 5.5 },
-    { label: "Bangkok (UTC+7)", offset: 7 },
-    { label: "Singapore (UTC+8)", offset: 8 },
-    { label: "Tokyo (UTC+9)", offset: 9 },
-    { label: "Sydney (UTC+10)", offset: 10 },
-    { label: "Auckland (UTC+12)", offset: 12 }
-];
-
 let lastMarqueeUpdate = 0;
+let marqueeMarkets = [];
+
+export function setMarqueeMarkets(markets) {
+    marqueeMarkets = markets;
+    lastMarqueeUpdate = 0; // force immediate update
+}
 
 export function updateTime() {
     const currentFrameTime = performance.now();
     const realDate = new Date();
     
-    if (currentFrameTime - lastMarqueeUpdate > 60000 || lastMarqueeUpdate === 0) {
+    // Only update the DOM if we have markets data and it's time
+    if (marqueeMarkets.length > 0 && (currentFrameTime - lastMarqueeUpdate > 60000 || lastMarqueeUpdate === 0)) {
         lastMarqueeUpdate = currentFrameTime;
-        const utcMs = realDate.getTime() + (realDate.getTimezoneOffset() * 60000);
+        
         let text = "";
-        timezones.forEach(tz => {
-            const localDate = new Date(utcMs + (3600000 * tz.offset));
-            const hh = String(localDate.getHours()).padStart(2, '0');
-            const mm = String(localDate.getMinutes()).padStart(2, '0');
-            text += `<span style="color:${tz.offset===0 ? '#fff' : '#58ccff'}">${tz.label}: ${hh}:${mm}</span> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; `;
+        
+        // Add GLOBAL UTC as the first fixed item
+        const utcHour = String(realDate.getUTCHours()).padStart(2, '0');
+        const utcMin = String(realDate.getUTCMinutes()).padStart(2, '0');
+        text += `<span style="color:#fff">GLOBAL UTC: ${utcHour}:${utcMin}</span> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; `;
+        
+        // Add all markets dynamically based on their timezone
+        marqueeMarkets.forEach(market => {
+            try {
+                const tz = market.trading_hours.timezone;
+                const formatter = new Intl.DateTimeFormat('en-US', {
+                    timeZone: tz,
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    hour12: false
+                });
+                
+                const parts = formatter.formatToParts(realDate);
+                let hour = parseInt(parts.find(p => p.type === 'hour')?.value || 0);
+                if (hour === 24) hour = 0; // 24:00 edge case fix
+                const hh = String(hour).padStart(2, '0');
+                const mm = String(parts.find(p => p.type === 'minute')?.value || 0).padStart(2, '0');
+                
+                text += `<span style="color:#58ccff">${market.name}: ${hh}:${mm}</span> &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; `;
+            } catch (e) {
+                // Ignore invalid timezones silently to prevent breaking the loop
+            }
         });
+        
         if (marqueeDisplay) marqueeDisplay.innerHTML = text + text + text;
     }
 

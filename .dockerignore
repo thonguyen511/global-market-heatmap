@@ -3,3 +3,5 @@
 .gemini
 .antigravitycli
 node_modules
+scripts/
+__pycache__/

@@ -1,30 +1,50 @@
+/**
+ * @file Interactions.js
+ * @description Manages all mouse interactions (hover, click, right-click) via Three.js Raycaster.
+ * Handles the display of tooltips and dynamically loading the correct TradingView image 
+ * into the Heatmap overlay container when a user interacts with a market dot.
+ */
+
 import { marketDots } from '../objects/Markets.js';
 import { earthGroup } from '../objects/Earth.js';
+import { moonGroup } from '../objects/Moon.js';
 
+// Setup Raycaster for converting 2D screen mouse coordinates into 3D space intersections
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
+// UI Elements
 const tvContainer = document.getElementById('tradingview-container');
 const heatmapOverlay = document.getElementById('heatmap-overlay');
 const tooltip = document.getElementById('market-tooltip');
 
-export let targetCameraX = 0;
+// Global interaction states
+export let targetCameraX = 0; // Target offset for smooth camera panning
 export let isEarthPaused = false;
 
+// Local interaction tracking
 let isHeatmapPinned = false;
 let autoCloseTimeout = null;
 let hoverDebounce = null;
 let currentHoveredMarket = null;
 
+// ==========================================
+// 1. Heatmap UI Logic
+// ==========================================
+
+/**
+ * Opens the heatmap panel and dynamically loads the scraped image for the given market.
+ * @param {Object} market - The JSON object containing market data (e.g., iso code)
+ */
 function showHeatmap(market) {
     heatmapOverlay.classList.remove('hidden');
     document.getElementById('heatmap-title').innerText = market.name;
     
-    targetCameraX = 400; 
+    targetCameraX = 445; 
     
     Array.from(tvContainer.children).forEach(child => child.style.display = 'none');
 
-    const widgetId = 'tv-widget-' + market.code;
+    const widgetId = 'tv-widget-' + market.iso;
     let widgetWrapper = document.getElementById(widgetId);
 
     if (!widgetWrapper) {
@@ -33,47 +53,15 @@ function showHeatmap(market) {
         widgetWrapper.style.width = '100%';
         widgetWrapper.style.height = '100%';
         
-        const iframe = document.createElement('iframe');
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.border = 'none';
-        widgetWrapper.appendChild(iframe);
+        const img = document.createElement('img');
+        img.src = `assets/cache_png/${market.iso}.png`;
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain'; // This ensures the image scales perfectly inside the container
+        img.style.borderRadius = '8px';
+        widgetWrapper.appendChild(img);
         
         tvContainer.appendChild(widgetWrapper);
-
-        const tvConfig = {
-            "dataSource": market.code,
-            "blockSize": "market_cap_basic",
-            "blockColor": "change",
-            "grouping": "no_group",
-            "locale": "en",
-            "symbolUrl": "",
-            "colorTheme": "dark",
-            "hasTopBar": false,
-            "isDataSetEnabled": false,
-            "isZoomEnabled": true,
-            "hasSymbolTooltip": true,
-            "isMonoSize": false,
-            "width": "100%",
-            "height": "100%"
-        };
-
-        const iframeDoc = iframe.contentWindow.document;
-        iframeDoc.open();
-        iframeDoc.write(`
-            <html>
-            <head><style>body { margin: 0; overflow: hidden; background-color: #0f0f19; }</style></head>
-            <body>
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>
-                    ${JSON.stringify(tvConfig)}
-                    </script>
-                </div>
-            </body>
-            </html>
-        `);
-        iframeDoc.close();
     } else {
         widgetWrapper.style.display = 'block';
     }
@@ -103,17 +91,17 @@ export function initInteractions(camera) {
             const dot = intersects[0].object;
             const market = dot.userData;
             
-            tooltip.innerText = `${market.name} (${market.isOpen ? "OPEN" : "CLOSED"})`;
+            tooltip.innerText = `${market.name} (${market.isOpen ? "OPEN" : (market.isHoliday ? "HOLIDAY" : "CLOSED")})`;
             tooltip.style.left = (event.clientX + 15) + 'px';
             tooltip.style.top = (event.clientY + 15) + 'px';
             tooltip.classList.remove('hidden');
             
             if (!isHeatmapPinned) {
-                if (currentHoveredMarket !== market.code) {
+                if (currentHoveredMarket !== market.iso) {
                     clearTimeout(hoverDebounce);
                     hoverDebounce = setTimeout(() => {
                         showHeatmap(market);
-                        currentHoveredMarket = market.code;
+                        currentHoveredMarket = market.iso;
                     }, 150);
                 }
                 
@@ -133,10 +121,11 @@ export function initInteractions(camera) {
         if (event.target.closest('#heatmap-overlay')) return;
 
         raycaster.setFromCamera(mouse, camera);
-        const intersects = raycaster.intersectObjects(marketDots);
-
-        if (intersects.length > 0) {
-            const dot = intersects[0].object;
+        
+        // 1. Check for intersections with Market Dots
+        const intersectsMarket = raycaster.intersectObjects(marketDots);
+        if (intersectsMarket.length > 0) {
+            const dot = intersectsMarket[0].object;
             const market = dot.userData;
             
             isHeatmapPinned = true;
@@ -144,7 +133,21 @@ export function initInteractions(camera) {
             clearTimeout(hoverDebounce);
             
             showHeatmap(market);
-            currentHoveredMarket = market.code;
+            currentHoveredMarket = market.iso;
+            return;
+        }
+        
+        // 2. Check for intersections with the Moon
+        const intersectsMoon = raycaster.intersectObjects(moonGroup.children);
+        if (intersectsMoon.length > 0) {
+            isHeatmapPinned = true;
+            clearTimeout(autoCloseTimeout);
+            clearTimeout(hoverDebounce);
+            
+            // Re-use showHeatmap by passing a mock object with 'crypto' as the iso
+            showHeatmap({ name: "Global Crypto Market", iso: "crypto" });
+            currentHoveredMarket = "crypto";
+            return;
         }
     });
 

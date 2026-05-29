@@ -1,0 +1,24 @@
+{
+  "name": "3dworld-market-heatmap",
+  "version": "1.0.0",
+  "description": "A beautiful, interactive 3D WebGL visualization of global financial markets using Three.js and TradingView widgets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thonguyen511/global-market-heatmap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thonguyen511/global-market-heatmap/issues"
+  },
+  "homepage": "https://github.com/thonguyen511/global-market-heatmap#readme",
+  "dependencies": {
+    "date-holidays": "^3.30.2"
+  }
+}

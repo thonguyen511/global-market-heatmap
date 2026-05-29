@@ -1,0 +1,307 @@
+[
+  {
+    "name": "USA",
+    "chosen_code": "SPX500",
+    "iso": "USA"
+  },
+  {
+    "name": "Argentina",
+    "chosen_code": "AllAR",
+    "iso": "ARG"
+  },
+  {
+    "name": "Australia",
+    "chosen_code": "ASX200",
+    "iso": "AUS"
+  },
+  {
+    "name": "Belgium",
+    "chosen_code": "AllBE",
+    "iso": "BEL"
+  },
+  {
+    "name": "Brazil",
+    "chosen_code": "AllBR",
+    "iso": "BRA"
+  },
+  {
+    "name": "Canada",
+    "chosen_code": "TSX",
+    "iso": "CAN"
+  },
+  {
+    "name": "Chile",
+    "chosen_code": "BCSSPIPSA",
+    "iso": "CHL"
+  },
+  {
+    "name": "Mainland China",
+    "chosen_code": "SZSE399001",
+    "iso": "CHN"
+  },
+  {
+    "name": "Colombia",
+    "chosen_code": "AllCO",
+    "iso": "COL"
+  },
+  {
+    "name": "Cyprus",
+    "chosen_code": "AllCY",
+    "iso": "CYP"
+  },
+  {
+    "name": "Denmark",
+    "chosen_code": "AllDK",
+    "iso": "DNK"
+  },
+  {
+    "name": "Egypt",
+    "chosen_code": "AllEG",
+    "iso": "EGY"
+  },
+  {
+    "name": "Estonia",
+    "chosen_code": "AllEE",
+    "iso": "EST"
+  },
+  {
+    "name": "Europe",
+    "chosen_code": "SXXP",
+    "iso": "EUR"
+  },
+  {
+    "name": "Finland",
+    "chosen_code": "AllFI",
+    "iso": "FIN"
+  },
+  {
+    "name": "France",
+    "chosen_code": "AllFR",
+    "iso": "FRA"
+  },
+  {
+    "name": "Germany",
+    "chosen_code": "AllDE",
+    "iso": "DEU"
+  },
+  {
+    "name": "Greece",
+    "chosen_code": "AllGRC",
+    "iso": "GRC"
+  },
+  {
+    "name": "Hong Kong, China",
+    "chosen_code": "HSI",
+    "iso": "HKG"
+  },
+  {
+    "name": "Hungary",
+    "chosen_code": "AllHU",
+    "iso": "HUN"
+  },
+  {
+    "name": "Iceland",
+    "chosen_code": "AllIS",
+    "iso": "ISL"
+  },
+  {
+    "name": "India",
+    "chosen_code": "CNX500",
+    "iso": "IND"
+  },
+  {
+    "name": "Indonesia",
+    "chosen_code": "AllID",
+    "iso": "IDN"
+  },
+  {
+    "name": "Ireland",
+    "chosen_code": "AllIE",
+    "iso": "IRL"
+  },
+  {
+    "name": "Israel",
+    "chosen_code": "TA125",
+    "iso": "ISR"
+  },
+  {
+    "name": "Italy",
+    "chosen_code": "FTSEMIB",
+    "iso": "ITA"
+  },
+  {
+    "name": "Japan",
+    "chosen_code": "NI225",
+    "iso": "JPN"
+  },
+  {
+    "name": "Kuwait",
+    "chosen_code": "AllKW",
+    "iso": "KWT"
+  },
+  {
+    "name": "Latvia",
+    "chosen_code": "AllLV",
+    "iso": "LVA"
+  },
+  {
+    "name": "Lithuania",
+    "chosen_code": "AllLT",
+    "iso": "LTU"
+  },
+  {
+    "name": "Luxembourg",
+    "chosen_code": "AllLU",
+    "iso": "LUX"
+  },
+  {
+    "name": "Malaysia",
+    "chosen_code": "AllMY",
+    "iso": "MYS"
+  },
+  {
+    "name": "Mexico",
+    "chosen_code": "AllMX",
+    "iso": "MEX"
+  },
+  {
+    "name": "Morocco",
+    "chosen_code": "AllMA",
+    "iso": "MAR"
+  },
+  {
+    "name": "Netherlands",
+    "chosen_code": "AllNL",
+    "iso": "NLD"
+  },
+  {
+    "name": "New Zealand",
+    "chosen_code": "AllNZ",
+    "iso": "NZL"
+  },
+  {
+    "name": "Nigeria",
+    "chosen_code": "AllNGA",
+    "iso": "NGA"
+  },
+  {
+    "name": "Norway",
+    "chosen_code": "AllNO",
+    "iso": "NOR"
+  },
+  {
+    "name": "Pakistan",
+    "chosen_code": "PSXKSE100",
+    "iso": "PAK"
+  },
+  {
+    "name": "Peru",
+    "chosen_code": "AllPE",
+    "iso": "PER"
+  },
+  {
+    "name": "Philippines",
+    "chosen_code": "AllPH",
+    "iso": "PHL"
+  },
+  {
+    "name": "Poland",
+    "chosen_code": "AllPO",
+    "iso": "POL"
+  },
+  {
+    "name": "Portugal",
+    "chosen_code": "AllPRT",
+    "iso": "PRT"
+  },
+  {
+    "name": "Qatar",
+    "chosen_code": "AllQA",
+    "iso": "QAT"
+  },
+  {
+    "name": "Romania",
+    "chosen_code": "AllRO",
+    "iso": "ROU"
+  },
+  {
+    "name": "Russia",
+    "chosen_code": "AllRU",
+    "iso": "RUS"
+  },
+  {
+    "name": "Saudi Arabia",
+    "chosen_code": "AllSA",
+    "iso": "SAU"
+  },
+  {
+    "name": "Serbia",
+    "chosen_code": "AllRS",
+    "iso": "SRB"
+  },
+  {
+    "name": "Singapore",
+    "chosen_code": "TVCSTI",
+    "iso": "SGP"
+  },
+  {
+    "name": "Slovakia",
+    "chosen_code": "AllSK",
+    "iso": "SVK"
+  },
+  {
+    "name": "South Africa",
+    "chosen_code": "SA40",
+    "iso": "ZAF"
+  },
+  {
+    "name": "South Korea",
+    "chosen_code": "KOSPI200",
+    "iso": "KOR"
+  },
+  {
+    "name": "Spain",
+    "chosen_code": "AllES",
+    "iso": "ESP"
+  },
+  {
+    "name": "Sweden",
+    "chosen_code": "OMXS30",
+    "iso": "SWE"
+  },
+  {
+    "name": "Switzerland",
+    "chosen_code": "AllCHE",
+    "iso": "CHE"
+  },
+  {
+    "name": "Taiwan, China",
+    "chosen_code": "GTSM50",
+    "iso": "TWN"
+  },
+  {
+    "name": "Thailand",
+    "chosen_code": "SET100",
+    "iso": "THA"
+  },
+  {
+    "name": "Turkey",
+    "chosen_code": "BIST100",
+    "iso": "TUR"
+  },
+  {
+    "name": "UAE",
+    "chosen_code": "AllARE",
+    "iso": "ARE"
+  },
+  {
+    "name": "UK",
+    "chosen_code": "AllUK",
+    "iso": "GBR"
+  },
+  {
+    "name": "Vietnam",
+    "chosen_code": "AllVN",
+    "iso": "VNM"
+  }
+]

@@ -27,12 +27,12 @@ async def background_scraper_loop():
             # Crypto scraper is synchronous, so we run it in a thread to prevent blocking
             await asyncio.to_thread(scrape_crypto.run)
             
-            logger.info("Scraping cycle complete. Sleeping for 10 minutes.")
+            logger.info("Scraping cycle complete. Sleeping for 5 minutes.")
         except Exception as e:
             logger.error(f"Error during scraping cycle: {e}")
             
-        # Sleep for 10 minutes (600 seconds)
-        await asyncio.sleep(600)
+        # Sleep for 5 minutes (300 seconds)
+        await asyncio.sleep(300)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

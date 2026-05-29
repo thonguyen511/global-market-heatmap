@@ -1,13 +1,12 @@
---
+---
 title: Global Market Heatmap
-emoji: ??
+emoji: 🌍
 colorFrom: blue
 colorTo: green
 sdk: docker
 app_port: 7860
 pinned: false
 ---
-
 # Global Market Heatmap 🌍
 
 A beautiful, interactive 3D WebGL visualization of global financial markets utilizing Three.js and automated backend data scraping.

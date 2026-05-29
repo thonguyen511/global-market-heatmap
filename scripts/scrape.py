@@ -24,7 +24,8 @@ def is_market_open(iso, trading_hours, holidays):
         
     try:
         tz = zoneinfo.ZoneInfo(tz_name)
-    except Exception:
+    except Exception as e:
+        print(f"Error loading timezone {tz_name} for {iso}: {e}")
         return False
         
     now = datetime.now(tz)

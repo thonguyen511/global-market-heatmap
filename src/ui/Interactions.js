@@ -54,9 +54,6 @@ function showHeatmap(market) {
         widgetWrapper.style.height = '100%';
         
         const img = document.createElement('img');
-        const timestamp = new Date().getTime();
-        
-        img.src = `assets/cache_png/${market.iso}.png?t=${timestamp}`;
         
         img.style.width = '100%';
         img.style.height = '100%';
@@ -68,6 +65,11 @@ function showHeatmap(market) {
     } else {
         widgetWrapper.style.display = 'block';
     }
+
+    // Always fetch the latest image and bypass browser cache
+    const imgElement = widgetWrapper.querySelector('img');
+    const timestamp = new Date().getTime();
+    imgElement.src = `assets/cache_png/${market.iso}.png?t=${timestamp}`;
 }
 
 function closeHeatmap() {

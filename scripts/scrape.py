@@ -31,7 +31,8 @@ def is_market_open(iso, trading_hours, holidays):
     now = datetime.now(tz)
     
     # Check weekend
-    if now.weekday() >= 5: # 5=Sat, 6=Sun
+    weekend_days = trading_hours.get('weekend_days', ['Saturday', 'Sunday'])
+    if now.strftime('%A') in weekend_days:
         return False
         
     # Check holiday

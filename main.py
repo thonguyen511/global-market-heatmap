@@ -31,8 +31,8 @@ async def background_scraper_loop():
         except Exception as e:
             logger.error(f"Error during scraping cycle: {e}")
             
-        # Sleep for 5 minutes (300 seconds)
-        await asyncio.sleep(300)
+        # Sleep for 3 minutes (180 seconds)
+        await asyncio.sleep(180)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

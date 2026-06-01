@@ -80,7 +80,7 @@ async def process_market(market, browser, market_details, holidays, semaphore):
         
         try:
             await page.goto(url, wait_until='networkidle')
-            await asyncio.sleep(5) # Wait for canvas to render
+            await asyncio.sleep(10) # Wait for canvas to render
             
             # Perform dark mode click sequence for EVERY page
             print(f"[{iso}] Setting dark mode...")
@@ -98,7 +98,7 @@ async def process_market(market, browser, market_details, holidays, semaphore):
             print(f"[{iso}] Clicking the Share/Export menu...")
             share_btn = page.locator('[data-qa-id="heatmap-top-bar_share"]')
             await share_btn.click(force=True, timeout=5000)
-            await asyncio.sleep(2)
+            await asyncio.sleep(5)
             
             print(f"[{iso}] Clicking 'Download image'...")
             async with page.expect_download(timeout=15000) as download_info:

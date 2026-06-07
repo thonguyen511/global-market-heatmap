@@ -74,10 +74,15 @@ function showHeatmap(market) {
 
 function closeHeatmap() {
     heatmapOverlay.classList.add('hidden');
+    heatmapOverlay.classList.remove('pseudo-fullscreen');
     currentHoveredMarket = null;
     targetCameraX = 0; 
-    if (document.fullscreenElement) {
-        document.exitFullscreen().catch(() => {});
+    
+    // Reset full screen icon if it was expanded
+    const icon = document.querySelector('#fullscreen-heatmap i');
+    if (icon) {
+        icon.classList.remove('fa-compress');
+        icon.classList.add('fa-expand');
     }
 }
 
@@ -89,19 +94,11 @@ export function initInteractions(camera) {
     });
 
     document.getElementById('fullscreen-heatmap').addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            heatmapOverlay.requestFullscreen().catch(err => {
-                console.error(`Error attempting to enable fullscreen: ${err.message}`);
-            });
-        } else {
-            document.exitFullscreen();
-        }
-    });
-
-    document.addEventListener('fullscreenchange', () => {
+        const isMaximized = heatmapOverlay.classList.toggle('pseudo-fullscreen');
         const icon = document.querySelector('#fullscreen-heatmap i');
+        
         if (icon) {
-            if (document.fullscreenElement) {
+            if (isMaximized) {
                 icon.classList.remove('fa-expand');
                 icon.classList.add('fa-compress');
             } else {

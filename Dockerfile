@@ -15,6 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install Playwright browsers
 RUN playwright install chromium
 
+# Force cache bust for Hugging Face
+ENV CACHE_BUST=20260607
 # Copy the rest of the application
 COPY --chown=1000:1000 . /app/
 

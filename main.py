@@ -54,7 +54,7 @@ app.mount("/src", StaticFiles(directory="src"), name="src")
 
 @app.get("/")
 async def root():
-    return FileResponse("index.html")
+    return FileResponse("index.html", headers={"Cache-Control": "no-cache, no-store, must-revalidate"})
 
 if __name__ == "__main__":
     import uvicorn

@@ -10,7 +10,7 @@ import { timeMultiplier, simulatedTimeMs, updateTime } from './core/TimeManager.
 import { earthGroup, initEarth } from './objects/Earth.js';
 import { initMarkets, updateMarketColors } from './objects/Markets.js';
 import { moonGroup, initMoon } from './objects/Moon.js';
-import { initInteractions, targetCameraX, isEarthPaused } from './ui/Interactions.js';
+import { initInteractions, targetCameraX, isEarthPaused } from './ui/Interactions.js?v=2';
 
 // ==========================================
 // 1. DOM Setup & Scene Initialization

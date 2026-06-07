@@ -222,6 +222,13 @@ p {
     margin: 0;
 }
 
+.heatmap-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#fullscreen-heatmap,
 #close-heatmap {
     background: none;
     border: none;
@@ -232,8 +239,23 @@ p {
     transition: color 0.2s;
 }
 
+#fullscreen-heatmap {
+    font-size: 18px; /* Slightly smaller than the X */
+}
+
+#fullscreen-heatmap:hover,
 #close-heatmap:hover {
     color: #fff;
+}
+
+#heatmap-overlay:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    background: rgba(10, 10, 15, 1);
 }
 
 #tradingview-container {

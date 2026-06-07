@@ -76,6 +76,9 @@ function closeHeatmap() {
     heatmapOverlay.classList.add('hidden');
     currentHoveredMarket = null;
     targetCameraX = 0; 
+    if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+    }
 }
 
 export function initInteractions(camera) {
@@ -83,6 +86,29 @@ export function initInteractions(camera) {
         isHeatmapPinned = false;
         clearTimeout(autoCloseTimeout);
         closeHeatmap();
+    });
+
+    document.getElementById('fullscreen-heatmap').addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            heatmapOverlay.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        const icon = document.querySelector('#fullscreen-heatmap i');
+        if (icon) {
+            if (document.fullscreenElement) {
+                icon.classList.remove('fa-expand');
+                icon.classList.add('fa-compress');
+            } else {
+                icon.classList.remove('fa-compress');
+                icon.classList.add('fa-expand');
+            }
+        }
     });
 
     window.addEventListener('mousemove', (event) => {
